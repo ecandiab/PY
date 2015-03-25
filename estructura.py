@@ -2,7 +2,7 @@ import sys
 
 from textwrap import dedent
 from collections import namedtuple
-from keyword import iskeyword
+from keyword import iskeyword 
 
 def recordtype(typename, field_names, verbose=False, **default_kwds):
     '''Returns a new class with named fields.

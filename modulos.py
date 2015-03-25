@@ -39,9 +39,7 @@ def cerca(x, y, epsilon):
  diferencia = x - y
  return abs(diferencia) < epsilon
 
-
-
-
+import math
 def calculoDistancia(puntoA, puntoB):
 	return math.sqrt(((puntoA.coordenadaX-puntoB.coordenadaX)**2)+((puntoA.coordenadaY-puntoB.coordenadaY)**2)+((puntoA.coordenadaZ-puntoB.coordenadaZ)**2))
 
