@@ -1,6 +1,6 @@
 #Distancia puntos 3D
 
-# calculoDstancia: Punto3D Punto3D -> Float
+# calculoDistancia: Punto3D Punto3D -> Float
 # Calcula la distancia entre 2 puntos 3D
 # Ejemplo: calculaDistancia(Punto3D(0,0,0), Punto3D(1,1,1))
 # Retorna: 1.73205080757
