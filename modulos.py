@@ -32,7 +32,7 @@ assert factorial(10) == 3628800
 
 
 
-# Functions
+# Funcion Cerca
 # cerca : num num num --> bool
 # retorna True si x es igual a y con precision epsilon
 def cerca(x, y, epsilon):
@@ -42,15 +42,12 @@ def cerca(x, y, epsilon):
 
 
 
+# Calculo Distancia entre 2 puntos 3D
+
 import math
 
 def calculoDistancia(puntoA, puntoB):
 	return math.sqrt(((puntoA.coordenadaX-puntoB.coordenadaX)**2)+((puntoA.coordenadaY-puntoB.coordenadaY)**2)+((puntoA.coordenadaZ-puntoB.coordenadaZ)**2))
-
-
-
-
-
 
 
 
