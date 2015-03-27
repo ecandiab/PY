@@ -1,5 +1,4 @@
 from funcionesAbstractas import * 
-from estructura import *
 from lista import *
 from cerca import *
 import math 
@@ -8,7 +7,7 @@ Ls = lista(3, lista(3, lista(4, lista(5, lista(7, listaVacia)))))
 
 
 
-print "La lista #1 es: "+str(Ls)
+print "La lista es: "+str(Ls)
 
 
 
@@ -57,7 +56,7 @@ def promedio(listaNumeros):
 	else:
 		return fold(lambda x,y: x+y, 0.0, listaNumeros)/contador(listaNumeros) 
 
-print "El promedio de elementos en lista es: "+str(promedio(Ls))
+print "El promedio de la lista es: "+str(promedio(Ls))
 
 # Test 1 usando la funcion cerca
 epsilon = 0.0001
