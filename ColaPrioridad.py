@@ -23,17 +23,6 @@ class ColaPrioridad:
                 self.lista[j/2] = tmp
             j = j/2
 
-
-
-
-   def ordenar(self):
-        j = len(self.lista) - 1
-        while j > 1:
-            if self.lista[j] < self.lista[j/2]:
-                tmp = self.lista[j]
-                self.lista[j] = self.lista[j/2]
-                self.lista[j/2] = tmp
-            j = j/2
             
 
     # extraerMinimo: None -> int
@@ -47,13 +36,31 @@ class ColaPrioridad:
         self.lista[1] = ultimoVal
         self.lista.pop()
         indiceUno = self.lista[1]
+        print self.lista
 
 
+        hijoIzq = indiceUno*2
+        hijoDer = indiceUno*2+1
+
+        while hijoIzq in self.lista
+
+        if hijoIzq > hijoDer # cuando el DERECHO derecho es el menor
+            if hijoDer > indiceUno:
+                break
+                else:
+                    hijoDer = indiceUno
+                    #ACTUALIZAR CASILLERO DEL INDICE
+                    return #menor valor
+
+            else: hijoIzq > hijoDer # cuando el hijo IZQUIERDO es el menor
+                if hijoDer > indiceUno:
+                    break
+                else:
+                    hijoDer = indiceUno
+                    #ACTUALIZAR CASILLERO DEL INDICE
+                    return #menor valor        
 
 
-   # self.lista.pop()
-
-    #hijos... 
 
 
 
