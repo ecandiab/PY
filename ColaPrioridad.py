@@ -30,19 +30,19 @@ class ColaPrioridad:
     # manteniendo la propiedad de min-heap de la cola de prioridad
     def extraerMinimo(self):
 
-        print self.lista
-        minimo = self.lista[1]
-        ultimoVal = self.lista.pop()
-        self.lista[1] = ultimoVal
-        self.lista.pop()
-        indiceUno = self.lista[1]
-        print self.lista
-
         indice = len(self.lista) - 1
         i = 1
 
         while i < indice:
             
+            print self.lista
+            minimo = self.lista[1]
+            ultimoVal = self.lista.pop()
+            self.lista[1] = ultimoVal
+            self.lista.pop()
+            indiceUno = self.lista[1]
+            print self.lista
+
 
             # Hijo derecho
             try:
@@ -70,7 +70,7 @@ class ColaPrioridad:
                         minimo = self.lista[1]  # actualizar el indice al del casillero con el cual se intercambio
                         ultimoVal = self.lista.pop() 
                         self.lista[1] = ultimoVal 
-                        
+
                         return self.lista[indice] # retorna el valor minimo
                 
                 if self.lista[indice*2+1] < self.lista[indice*2]: # si Der es menor              
