@@ -35,14 +35,14 @@ class ColaPrioridad:
 
         while indice < j:
             
-            # Hijo derecho
+            # valida si tiene hijo a la izquierda
             try:
                 self.lista[indice*2]
                 hijoIzq = True
             except IndexError:
                 hijoIzq = False
 
-            # Hijo izquierdo
+            # valida si tiene hijo a la derecha
             try:
                 self.lista[indice*2+1]
                 hijoDer = True
@@ -50,7 +50,7 @@ class ColaPrioridad:
                 hijoDer = False
 
 
-            if hijoDer and hijoIzq: # es un padre con 2 hijos
+            if hijoDer and hijoIzq: # si el padre tiene 2 hijos...
                 
                 if self.lista[indice*2+1] > self.lista[indice*2]: # si Izq es menor...
                     if self.lista[indice*2] > self.lista[indice]: # si izq es mayor que el indice
@@ -78,10 +78,7 @@ class ColaPrioridad:
         print valMinimo
         return valMinimo
 
-
-
-
-       
+      
 
 # Tests
 heap = ColaPrioridad()
