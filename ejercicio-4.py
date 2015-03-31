@@ -6,7 +6,7 @@
 from cerca import *
 
 lista1 = ["uno", 2, "tres", 4, 4, "cinco", 6, "siete"]
-lista2 = [1, "dos", "tres", 4, 5, "seis", "siete"]
+lista2 = [1, "dos", "tres", 4, 4, 5, "seis", "siete"]
 lista3 = [1,2,3,4, False, 2.5, 6.2, 9.9, "Filete", "Entrecot", "Hambre", 90000000.2]
 lista4 = [1,2.0, 9, True, 2.5, "Hambre", 200.000000002]
 lista5 = ["Azul", 123, "Rojo", True, 10.0, False, False, False, "Blanco", 123.123]

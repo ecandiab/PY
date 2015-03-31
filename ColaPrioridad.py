@@ -38,33 +38,49 @@ class ColaPrioridad:
         indiceUno = self.lista[1]
         print self.lista
 
+        indice = len(self.lista) - 1
+        i = 1
 
-        hijoIzq = indiceUno*2
-        hijoDer = indiceUno*2+1
+        while i < indice:
+            
 
-        while hijoIzq in self.lista
+            # Hijo derecho
+            try:
+                self.lista[indice*2]
+                hijoIzq = True
+            except IndexError:
+                hijoIzq = False
 
-        if hijoIzq > hijoDer # cuando el DERECHO derecho es el menor
-            if hijoDer > indiceUno:
-                break
-                else:
-                    hijoDer = indiceUno
-                    #ACTUALIZAR CASILLERO DEL INDICE
-                    return #menor valor
-
-            else: hijoIzq > hijoDer # cuando el hijo IZQUIERDO es el menor
-                if hijoDer > indiceUno:
-                    break
-                else:
-                    hijoDer = indiceUno
-                    #ACTUALIZAR CASILLERO DEL INDICE
-                    return #menor valor        
+            # Hijo izquierdo
+            try:
+                self.lista[indice*2+1]
+                hijoDer = True
+            except IndexError:
+                hijoDer = False
 
 
+            if hijoDer and hijoIzq: # es un padre con 2 hijos
+                
+                if self.lista[indice*2+1] > self.lista[indice*2]: # si Izq es menor
+                    if self.lista[indice*2] > self.lista[indice]: # si izq es mayor que el indice
+                        break # sale del ciclo
+                    else:
+                        self.lista[indice] = self.lista[indice*2] # intercambia el casillero del indice con el menor de sus hijos
+                        # actualizar el indice al del casillero con el cual se intercambio
+                        return self.lista[indice] # retorna el valor minimo
+                
+                if self.lista[indice*2+1] < self.lista[indice*2]: # si Der es menor              
+                    if self.lista[indice*2+1] > self.lista[indice]:
+                        break
+                    else:
+                        self.lista[indice] = self.lista[indice*2+1]
+                        return self.lista[indice]
+
+            i += 1                
 
 
 
- 
+
 
 
 
