@@ -20,20 +20,28 @@ class Automovil:
 		self.capacidad = capacidad
 		self.rendimiento = rendimiento
 
-	
+	# getCombustible: None -> float
+	# Devuelve la cantidad de combustible del auto
 	def getCombustible(self):
 		return self.combustible
 
+	# setCombustible: float -> float
+	# Efecto: modifica el valor del campo combustible
 	def setCombustible(self,combustible):
 		self.combustible = combustible
 
+	# panne: None -> boolean
+	# Devuelve True o False	segun el estado del combustible del auto
 	def panne(self):
 		if self.combustible > 0.0:
 			return False
 		else:
 			return True
 
-
+	# avanzar: float -> float
+	# Efecto: modifica el campo combustible
+	# Devuelve la cantidad de KM recorridos
+	# Ejemplo: avanzar(1000.0) -> retorna 357	/ supuesto: si es que en estanque hay 65 lts.
 	def avanzar(self,kilometros):
 
 		ltsViaje = (kilometros/self.rendimiento)
@@ -47,6 +55,10 @@ class Automovil:
 	  		self.setCombustible(litrosGasta)
 			return kilometros
 
+	# llenarEstanque: float -> float
+	# Efecto: modifica el campo combustible
+	# Devuelve la cantidad de Litros que se llenaron 
+	# Ejemplo: llenarEstanque(1000.0) retorna 25 / supuesto: si es que en estanque hay 40 lts.
 
 	def llenarEstanque(self,litros):
 
