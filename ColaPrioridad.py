@@ -1,7 +1,6 @@
 # Campos
-# lista: list(int)
 
-from lista import *
+# lista: list(int)
 
 class ColaPrioridad:
 
@@ -28,22 +27,14 @@ class ColaPrioridad:
     # extraerMinimo: None -> int
     # Saca el valor minimo de la cola de prioridad y lo retorna
     # manteniendo la propiedad de min-heap de la cola de prioridad
+
     def extraerMinimo(self):
 
-        indice = len(self.lista) - 1
-        i = 1
+        j = len(self.lista) - 1
+        indice = 1
 
-        while i < indice:
+        while indice < j:
             
-            print self.lista
-            minimo = self.lista[1]
-            ultimoVal = self.lista.pop()
-            self.lista[1] = ultimoVal
-            self.lista.pop()
-            indiceUno = self.lista[1]
-            print self.lista
-
-
             # Hijo derecho
             try:
                 self.lista[indice*2]
@@ -61,34 +52,31 @@ class ColaPrioridad:
 
             if hijoDer and hijoIzq: # es un padre con 2 hijos
                 
-                if self.lista[indice*2+1] > self.lista[indice*2]: # si Izq es menor
+                if self.lista[indice*2+1] > self.lista[indice*2]: # si Izq es menor...
                     if self.lista[indice*2] > self.lista[indice]: # si izq es mayor que el indice
                         break # sale del ciclo
                     else:
-                        self.lista[indice] = self.lista[indice*2] # intercambia el casillero del indice con el menor de sus hijos
-                       
-                        minimo = self.lista[1]  # actualizar el indice al del casillero con el cual se intercambio
-                        ultimoVal = self.lista.pop() 
-                        self.lista[1] = ultimoVal 
-
-                        return self.lista[indice] # retorna el valor minimo
-                
-                if self.lista[indice*2+1] < self.lista[indice*2]: # si Der es menor              
+                        valMinimo = self.lista[indice]  
+                        self.lista[indice] = self.lista[indice*2] # intercambia el casillero del indice con el menor de sus hijos                                               
+                        self.lista[indice*2] = valMinimo 
+                else:       
                     if self.lista[indice*2+1] > self.lista[indice]:
                         break
                     else:
-                        self.lista[indice] = self.lista[indice*2+1]
+                        valMinimo = self.lista[indice]
+                        self.lista[indice] = self.lista[indice*2+1]                     
+                        self.lista[indice*2+1] = valMinimo
 
-                        minimo = self.lista[1]  
-                        ultimoVal = self.lista.pop() 
-                        self.lista[1] = ultimoVal 
+            indice += 1 
 
-                        return self.lista[indice]
-
-            i += 1                
-
-
-
+        valMinimo = self.lista[1] 
+        valUltimo = self.lista.pop() 
+        try:
+            self.lista[1] = valUltimo # copia el ultimo valor de lista en el casillero 1
+        except IndexError:
+            pass
+        print valMinimo
+        return valMinimo
 
 
 
