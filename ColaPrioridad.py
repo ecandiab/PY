@@ -66,7 +66,11 @@ class ColaPrioridad:
                         break # sale del ciclo
                     else:
                         self.lista[indice] = self.lista[indice*2] # intercambia el casillero del indice con el menor de sus hijos
-                        # actualizar el indice al del casillero con el cual se intercambio
+                       
+                        minimo = self.lista[1]  # actualizar el indice al del casillero con el cual se intercambio
+                        ultimoVal = self.lista.pop() 
+                        self.lista[1] = ultimoVal 
+                        
                         return self.lista[indice] # retorna el valor minimo
                 
                 if self.lista[indice*2+1] < self.lista[indice*2]: # si Der es menor              
@@ -74,10 +78,14 @@ class ColaPrioridad:
                         break
                     else:
                         self.lista[indice] = self.lista[indice*2+1]
+
+                        minimo = self.lista[1]  
+                        ultimoVal = self.lista.pop() 
+                        self.lista[1] = ultimoVal 
+
                         return self.lista[indice]
 
             i += 1                
-
 
 
 
