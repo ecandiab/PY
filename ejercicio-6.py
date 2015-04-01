@@ -11,11 +11,12 @@
 # ********** 
 
 frase = "hola como estas"
-frase2 = "muy bien gracias y tu"
+frase2 = ""
 frase3 = "yo esto muuuuuuy bieeeen aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aa"
-frase4 = "excelente estas genial"
-frase5 = ""
+frase4 = "12.0 12122121 10. 0.0 10.0 "
+frase5 = "12123132121 231 21 1"
 frase6 = "hola"
+
 
 def caja(lista):
 
