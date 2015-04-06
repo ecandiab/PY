@@ -1,0 +1,173 @@
+Operaciones con tipo de datos numericos.
+
+Operacion		Resultado
+---------------------------------
+x + y			suma de x e y
+z - y			resta de x e y
+x * y			producto de x e y
+x / y			cociente de x e y
+x // y			cociente (truncado) de x e y
+x % y			resto de x / y
+-x				x negativo
++x				x sin cambio
+abs(x)			valor absoluto o magnitud de x
+int(x)			x convertido en entero
+long(x)			x convertido en log
+float(x)		x convertido a numero real
+divmod(x, y)	el par (x // y, x % y)
+pow(x, y)		x elevado a y
+x ** y			x elevado a y
+
+Screem
+-------
+print 			imprime datos
+imput			lee un dato ingresado (tipo de dato asignado es el mas adecuado al dato ingresado)
+imput raw		lee un texto (String)
+
+Modulos
+-------
+import			Los modulos se cargan con import
+math y random	Dos modulos importantes predefinidos en python
+
+Modulo math
+-----------
+math.sqtr(x)	Raiz cuadrada de x (x > 0)
+math.pow(x)		x elevado a y (x ** y)
+math.exp(x)		e elevado a y (e = 2.71828...)
+math.log(x)		Logaritmo natural de x
+math.sin(x)		Seno de x (x en radianes)
+math.cos(x)		Coseno de x (x en radianes)
+
+Modulo random
+-------------
+random.random()		Numero aleatorio en [0,1](float)
+random.ranint(x,y)	Numero entero aleatorio en [x,y] (x < y)
+
+
+Funciones utiles predefinidas en python
+---------------------------------------
+abs(-5)				# Obtiene el valor aboluto
+# 5
+max(24, 45, 12)		# Maximo entre varios numeros
+# 45
+min(24, 45, 12, 83)	# Minimo entre varios numeros
+# 12
+
+Modulos implementados por los usuarios se cargan
+------------------------------------------------
+import nombreModulo
+from   nombreModulo import *
+
+Datos Compuestos
+-------------------------------------------
+import estructura
+
+# No se pueden modificar los valores (no mutables)
+estructura.crear("fraccion","numerador denominador")
+a = fraccion(1, 2)
+fraccion(numerador=1, denominador=2)
+
+a.numerador
+# 1
+a.denominador
+# 2
+
+Bucles para Estructuras indexadas
+---------------------------
+For o While
+
+
+Manejo String
+-------------
+x.find(y)			Devuelve indice de la primera aparicion de y en x, -1 si no esta
+x.count(y)			Devuelve el numero de apariciones de y en x
+x.isalpha()			Devuelve True si x solo contiene caracteres alfabeticos
+x.isdigit()			Devuelve True si x solo contiene caracteres numericos
+x.islower()			Devuelve True si x solo contiene minusculas
+x.isupper()			Devuelve True si x solo contiene mayusculas
+x.upper()			Devuelve x con todas las letras en mayusculas
+x.lower()			Devuelve x con todas las letras en minusculas
+x.strip()			Devuelve x sin especios en blanco al principio ni al final
+x.replace(y,z)		Devuelve x con la instancia de y reemplazada por z
+
+
+Listas Python Range
+-------------------
+
+range(stop): int -> lista de enteros
+range(start, stop) int int -> lista de enteros
+range(start, stop, step) int int int -> lista de enteros
+
+
+Funciones predefinidas para listas
+----------------------------------
+L.append(x)			# agrega x al final de la lista
+L.extend(L1)		# extiende L con elementos de la lista L1
+L.insert(i,x)		# inserta x en indice i (el resto se desplaza una posicion)
+L.remove(x)			# elimina primer x de la lista
+L.pop(i)			# elimina (y entrega) el elemento de indice i
+L.reverse()			# invierte los elementos de L
+L.sort()			# ordena los elementos de L
+total = sum(lista)	# suma los elementos de la lista
+menor = min(lista)	# devuelve el menor de una lista
+mayor = max(lista)  # devuelve el mayor de una lista
+n = len(lista)		# devuelve el largo de una lista
+
+Clases y Objetos en Python
+--------------------------
+#Ejemplos Clase Fraccion
+
+Ejemplo de uso				Resultado
+--------------				----------
+x = Fraccion(1,2)			x: fraccion 1/2
+y = Fraccion(1,3)			x: fraccion 1/3
+z = Fraccion(6,8)			x: fraccion 6/8
+x.suma(y)					retorna fraccion 5/6
+x.getNumerador()			retorna 1	(getter)
+y.getDenominador()			retorna 3	(getter)
+z.simplificar()				cambia z a fracccion 3/4	(mutador o setter)
+x.toString()				retorna string "5/6"
+x.mayorQue(y)				retorna True (dado que x > y)
+
+Manejo de excepciones
+---------------------
+try:
+	instrucciones1
+except Nombre:
+	instrucciones2
+instrucciones3
+
+Class NombreExcepcion(Exception);
+	def __init__(self):
+	pass
+	
+raise(NombreException)
+
+Tipo de Datos Abstractos TDA
+-----------------------------
+
+TDA Stack
+---------
+s=Stack()		crea stack vacio
+s.push(x)		Poner x en stack. Si esta lleno produce exception StackFull
+s.pop()			Saca un valor de stack. Si esta vacio produce exception StackEmpty
+s.reset()		vacia stack
+s.empty()		True si stack esta vacio
+s.full()		True si stack esta lleno
+
+TDA Cola
+---------
+q=Queue()		crear cola
+q.enque(x)		Poner x en Cola. Si esta lleno produce exception QueueFull
+q.deque()		Saca un valor de la Cola. Si esta lleno produce exception QueueEmpty
+q.reset()		vacia la cola
+q.empty()		True si la cola esta vacio
+q.full()		True si la cola esta llena
+
+TDA Diccionario
+---------------
+buscar(x)		devolver significado de palabra x exception: NoExiste
+agregar(x)		agregar palabra x con significado y excepciones: YaExiste, Lleno
+borrar(x)		borrar palabra x exception: NoExiste
+cambiar(x,y)	cambiar significado de la palabra x por y exception: NoExiste
+

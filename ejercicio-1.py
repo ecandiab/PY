@@ -8,6 +8,7 @@
 
 import estructura
 from modulos import *
+from cerca import *
 
 estructura.crear("punto3D","coordenadaX coordenadaY coordenadaZ")
 

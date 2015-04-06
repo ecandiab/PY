@@ -32,14 +32,6 @@ assert factorial(10) == 3628800
 
 
 
-# Funcion Cerca
-# cerca : num num num --> bool
-# retorna True si x es igual a y con precision epsilon
-def cerca(x, y, epsilon):
- diferencia = x - y
- return abs(diferencia) < epsilon
-
-
 
 
 # Calculo Distancia entre 2 puntos 3D
